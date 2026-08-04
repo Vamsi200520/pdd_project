@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #2D7A7E;
+    --color-primary-dark: #205559;
+    --color-primary-light: #E0F7F4;
+    --color-accent: #4DB6AC;
+    --color-bg-teal: #328587;
+    --color-button: #00897B;
+
+    --color-green-zone: #4CAF50;
+    --color-yellow-zone: #FBC02D;
+    --color-red-zone: #F44336;
+
+    --color-background: #0f172a;
+    --color-surface: #1e293b;
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+}
+
+:root {
+    --primary: #2D7A7E;
+    --primary-dark: #205559;
+    --primary-light: #E0F7F4;
+    --accent: #4DB6AC;
+    --bg-teal: #328587;
+    --button: #00897B;
+
+    --background: #0f172a;
+    --surface: #1e293b;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+
+    --green-zone: #4CAF50;
+    --yellow-zone: #FBC02D;
+    --red-zone: #F44336;
+
+    --success: var(--green-zone);
+    --warning: var(--yellow-zone);
+    --error: var(--red-zone);
+
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--surface);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
