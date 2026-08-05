@@ -159,10 +159,38 @@ jobs:
         run: |
           python tests/threshold_check.py
 
-      - name: Upload All Test Reports
+      - name: Upload API Tests Excel Report
         uses: actions/upload-artifact@v4
         with:
-          name: all-test-reports
-          path: |
-            reports/*.xlsx
-            reports/vulnerability_report.json
+          name: api-tests-report
+          path: reports/api_tests_report.xlsx
+
+      - name: Upload Selenium Tests Excel Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-tests-report
+          path: reports/selenium_tests_report.xlsx
+
+      - name: Upload Appium Tests Excel Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: appium-tests-report
+          path: reports/appium_tests_report.xlsx
+
+      - name: Upload Load Tests Excel Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: load-tests-report
+          path: reports/load_tests_report.xlsx
+
+      - name: Upload Vulnerability Excel Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: vulnerability-excel-report
+          path: reports/vulnerability_report.xlsx
+
+      - name: Upload CI Summary Excel Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-summary-report
+          path: reports/ci_summary_report.xlsx
