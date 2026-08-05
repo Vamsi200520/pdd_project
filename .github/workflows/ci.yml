@@ -146,6 +146,23 @@ jobs:
           name: vulnerability-report
           path: reports
 
+      - name: Install Report Generator Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas openpyxl
+
+      - name: Generate Excel Reports
+        run: |
+          python tests/generate_excel_reports.py reports
+
       - name: Run Quality Gate Check
         run: |
           python tests/threshold_check.py
+
+      - name: Upload All Test Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-test-reports
+          path: |
+            reports/*.xlsx
+            reports/vulnerability_report.json
