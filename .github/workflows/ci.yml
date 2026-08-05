@@ -24,7 +24,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r asthma-backend/requirements.txt
-          pip install pytest fastapi httpx python-dotenv passlib bcrypt==3.2.2 python-multipart email-validator
+          pip install pytest fastapi httpx python-dotenv passlib bcrypt==3.2.2 python-multipart email-validator "python-jose[cryptography]"
 
       - name: Run 100 API Tests
         run: |
